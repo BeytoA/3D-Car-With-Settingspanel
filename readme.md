@@ -1,7 +1,7 @@
 ![Asset Thumbnail](icon196x196.png?raw=true)
 # 3D Car with Settingspanel
 
-This asset contains a driveable car which you can directly use in your project. All you need to do is to drag and drop the `car.tscn` file into your scene. Once you are done, you could press `**ESC**` to open the `SettingsPanel` to adjust the `VehicleBody` and all the `Wheel` nodes individually. Main focus of this asset is to make a quick start with cars in Godot and save all the vehicle settings you have made for later use. This can be done by the built-in preset system in this asset.
+This asset contains a driveable car which you can directly use in your project. All you need to do is to drag and drop the `car.tscn` file into your scene. Once you are done, you could press **`ESC`** to open the `SettingsPanel` to adjust the `VehicleBody` and all the `Wheel` nodes individually. Main focus of this asset is to make a quick start with cars in Godot and save all the vehicle settings you have made for later use. This can be done by the built-in preset system in this asset.
 
 ## Getting Started
 
@@ -12,7 +12,7 @@ You need to copy the `3d_car_customizable` folder into your project. You are now
 
 ![Screenshot](screenshot2.png?raw=true)
 
-Simply control the car with the arrow keys and press `**ESC**` to open the `Settingspanel`. Here, you can adjust several settings of the car. `ScriptVariables` and `VehicleBody` are general car settings. After them, you can see `rear_left`, `rear_right`, `front_right` and `front_left` labels presenting each `Wheel` node. Sliders apply the values immediately on the car. You can save these settings by pressing on the `Save Preset` button at the top of the panel. A preset name should be written in the `LineEdit` next to the button.
+Simply control the car with the arrow keys and press **`ESC`** to open the `Settingspanel`. Here, you can adjust several settings of the car. `ScriptVariables` and `VehicleBody` are general car settings. After them, you can see `rear_left`, `rear_right`, `front_right` and `front_left` labels presenting each `Wheel` node. Sliders apply the values immediately on the car. You can save these settings by pressing on the `Save Preset` button at the top of the panel. A preset name should be written in the `LineEdit` next to the button.
 
 A preset is located in the `user://3d_car_customizable/` folder. All the presets in this folder are listed in the `Preset List` on launch. The first preset on this list will be loaded automatically when the node enters the tree.
 
@@ -20,7 +20,7 @@ A preset is located in the `user://3d_car_customizable/` folder. All the presets
 
 - [x] `Use Camera` attaches a camera on the hood.
 - [x] `Use Controls` lets you control the car with arrow keys.
-- [x] `Show Settings` will show Settingspanel when `**ESC**` is pressed. *Does not disable preset system*
+- [x] `Show Settings` will show Settingspanel when **`ESC`** is pressed. *Does not disable preset system*
 
 ### Car Model
 ![Car Model](screenshot1.png?raw=true)
