@@ -1,0 +1,444 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://assets/3d_car_customizable/scripts/wheelsettings.gd" type="Script" id=1]
+
+[node name="Wheel" type="VBoxContainer"]
+margin_right = 812.0
+margin_bottom = 696.0
+script = ExtResource( 1 )
+
+[node name="SettingsTitle" type="Label" parent="."]
+margin_left = 353.0
+margin_right = 459.0
+margin_bottom = 14.0
+size_flags_horizontal = 4
+text = "Front Left Wheel"
+
+[node name="Binding" type="HBoxContainer" parent="."]
+margin_left = 309.0
+margin_top = 18.0
+margin_right = 503.0
+margin_bottom = 38.0
+size_flags_horizontal = 4
+
+[node name="BindedToText" type="Label" parent="Binding"]
+margin_top = 3.0
+margin_right = 70.0
+margin_bottom = 17.0
+text = "Binded to: "
+
+[node name="BindedTo" type="OptionButton" parent="Binding"]
+margin_left = 74.0
+margin_right = 194.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 120, 0 )
+
+[node name="General" type="VBoxContainer" parent="."]
+margin_top = 42.0
+margin_right = 812.0
+margin_bottom = 163.0
+
+[node name="General" type="Label" parent="General"]
+margin_right = 812.0
+margin_bottom = 65.0
+text = "
+
+General
+"
+
+[node name="UseAsTraction" type="CheckBox" parent="General" groups=[
+"CanDisable",
+]]
+margin_top = 69.0
+margin_right = 812.0
+margin_bottom = 93.0
+text = "Use as traction"
+
+[node name="UseAsSteering" type="CheckBox" parent="General" groups=[
+"CanDisable",
+]]
+margin_top = 97.0
+margin_right = 812.0
+margin_bottom = 121.0
+text = "Use as steering"
+
+[node name="Wheel" type="VBoxContainer" parent="."]
+margin_top = 167.0
+margin_right = 300.0
+margin_bottom = 384.0
+rect_min_size = Vector2( 300, 0 )
+size_flags_horizontal = 0
+
+[node name="Wheel" type="Label" parent="Wheel"]
+margin_right = 300.0
+margin_bottom = 65.0
+text = "
+
+Wheel
+"
+
+[node name="RollInfluenceText" type="Label" parent="Wheel"]
+margin_top = 69.0
+margin_right = 300.0
+margin_bottom = 83.0
+text = "Roll Influence = (0.1)"
+
+[node name="RollInfluence" type="HBoxContainer" parent="Wheel"]
+margin_top = 87.0
+margin_right = 300.0
+margin_bottom = 103.0
+
+[node name="Min" type="Label" parent="Wheel/RollInfluence"]
+margin_top = 1.0
+margin_right = 20.0
+margin_bottom = 15.0
+text = "0.0"
+
+[node name="WheelRollInfluence" type="HSlider" parent="Wheel/RollInfluence" groups=[
+"CanEdit",
+]]
+margin_left = 24.0
+margin_right = 276.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+max_value = 1.0
+step = 0.1
+value = 0.1
+scrollable = false
+ticks_on_borders = true
+
+[node name="Max" type="Label" parent="Wheel/RollInfluence"]
+margin_left = 280.0
+margin_top = 1.0
+margin_right = 300.0
+margin_bottom = 15.0
+text = "1.0"
+
+[node name="WheelRadiusText" type="Label" parent="Wheel"]
+margin_top = 107.0
+margin_right = 300.0
+margin_bottom = 121.0
+text = "Radius = (0.5)"
+
+[node name="WheelRadius" type="HBoxContainer" parent="Wheel"]
+margin_top = 125.0
+margin_right = 300.0
+margin_bottom = 141.0
+
+[node name="Min" type="Label" parent="Wheel/WheelRadius"]
+margin_top = 1.0
+margin_right = 20.0
+margin_bottom = 15.0
+text = "0.0"
+
+[node name="WheelRadius" type="HSlider" parent="Wheel/WheelRadius" groups=[
+"CanEdit",
+]]
+margin_left = 24.0
+margin_right = 276.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+min_value = 0.01
+max_value = 1.0
+step = 0.01
+value = 0.5
+scrollable = false
+
+[node name="Max" type="Label" parent="Wheel/WheelRadius"]
+margin_left = 280.0
+margin_top = 1.0
+margin_right = 300.0
+margin_bottom = 15.0
+text = "1.0"
+
+[node name="RestLengthText" type="Label" parent="Wheel"]
+margin_top = 145.0
+margin_right = 300.0
+margin_bottom = 159.0
+text = "Rest Length = (0.15)"
+
+[node name="RestLength" type="HBoxContainer" parent="Wheel"]
+margin_top = 163.0
+margin_right = 300.0
+margin_bottom = 179.0
+
+[node name="Min" type="Label" parent="Wheel/RestLength"]
+margin_top = 1.0
+margin_right = 20.0
+margin_bottom = 15.0
+text = "0.0"
+
+[node name="WheelRestLength" type="HSlider" parent="Wheel/RestLength" groups=[
+"CanEdit",
+]]
+margin_left = 24.0
+margin_right = 276.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+max_value = 2.0
+step = 0.01
+value = 0.15
+scrollable = false
+
+[node name="Max" type="Label" parent="Wheel/RestLength"]
+margin_left = 280.0
+margin_top = 1.0
+margin_right = 300.0
+margin_bottom = 15.0
+text = "2.0"
+
+[node name="FrictionSlipText" type="Label" parent="Wheel"]
+margin_top = 183.0
+margin_right = 300.0
+margin_bottom = 197.0
+text = "Friction Slip = (10.5)"
+
+[node name="FrictionSlip" type="HBoxContainer" parent="Wheel"]
+margin_top = 201.0
+margin_right = 300.0
+margin_bottom = 217.0
+
+[node name="Min" type="Label" parent="Wheel/FrictionSlip"]
+margin_top = 1.0
+margin_right = 8.0
+margin_bottom = 15.0
+text = "0"
+
+[node name="WheelFrictionSlip" type="HSlider" parent="Wheel/FrictionSlip" groups=[
+"CanEdit",
+]]
+margin_left = 12.0
+margin_right = 280.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+max_value = 12.0
+step = 0.1
+value = 10.5
+scrollable = false
+ticks_on_borders = true
+
+[node name="Max" type="Label" parent="Wheel/FrictionSlip"]
+margin_left = 284.0
+margin_top = 1.0
+margin_right = 300.0
+margin_bottom = 15.0
+text = "12"
+
+[node name="Suspension" type="VBoxContainer" parent="."]
+margin_top = 388.0
+margin_right = 250.0
+margin_bottom = 583.0
+rect_min_size = Vector2( 250, 0 )
+size_flags_horizontal = 0
+
+[node name="Suspension" type="Label" parent="Suspension"]
+margin_right = 250.0
+margin_bottom = 65.0
+text = "
+
+Suspension
+"
+
+[node name="TravelText" type="Label" parent="Suspension"]
+margin_top = 69.0
+margin_right = 250.0
+margin_bottom = 83.0
+text = "Travel"
+
+[node name="Travel" type="HBoxContainer" parent="Suspension"]
+margin_top = 87.0
+margin_right = 250.0
+margin_bottom = 103.0
+
+[node name="Min" type="Label" parent="Suspension/Travel"]
+margin_top = 1.0
+margin_right = 20.0
+margin_bottom = 15.0
+text = "0.0"
+
+[node name="SuspensionTravel" type="HSlider" parent="Suspension/Travel" groups=[
+"CanEdit",
+]]
+margin_left = 24.0
+margin_right = 226.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+max_value = 1.0
+step = 0.01
+value = 1.0
+scrollable = false
+
+[node name="Max" type="Label" parent="Suspension/Travel"]
+margin_left = 230.0
+margin_top = 1.0
+margin_right = 250.0
+margin_bottom = 15.0
+text = "1.0"
+
+[node name="StiffnessText" type="Label" parent="Suspension"]
+margin_top = 107.0
+margin_right = 250.0
+margin_bottom = 121.0
+text = "Stiffness = (5.88)"
+
+[node name="Stiffness" type="HBoxContainer" parent="Suspension"]
+margin_top = 125.0
+margin_right = 250.0
+margin_bottom = 149.0
+
+[node name="SuspensionStiffness" type="HSlider" parent="Suspension/Stiffness" groups=[
+"CanEdit",
+]]
+margin_right = 172.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+max_value = 300.0
+step = 0.01
+value = 5.88
+scrollable = false
+ticks_on_borders = true
+
+[node name="SuspensionStiffnessBox" type="SpinBox" parent="Suspension/Stiffness" groups=[
+"CanEdit",
+]]
+margin_left = 176.0
+margin_right = 250.0
+margin_bottom = 24.0
+max_value = 300.0
+step = 0.01
+value = 5.88
+
+[node name="MaxForceText" type="Label" parent="Suspension"]
+margin_top = 153.0
+margin_right = 250.0
+margin_bottom = 167.0
+text = "Max Force = (6000.0)"
+
+[node name="MaxForce" type="HBoxContainer" parent="Suspension"]
+margin_top = 171.0
+margin_right = 250.0
+margin_bottom = 195.0
+
+[node name="SuspensionMaxForce" type="HSlider" parent="Suspension/MaxForce" groups=[
+"CanEdit",
+]]
+margin_right = 172.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+max_value = 20000.0
+step = 0.01
+value = 6000.0
+scrollable = false
+ticks_on_borders = true
+
+[node name="SuspensionMaxForceBox" type="SpinBox" parent="Suspension/MaxForce" groups=[
+"CanEdit",
+]]
+margin_left = 176.0
+margin_right = 250.0
+margin_bottom = 24.0
+max_value = 20000.0
+step = 0.01
+value = 6000.0
+
+[node name="Damping" type="VBoxContainer" parent="."]
+margin_top = 587.0
+margin_right = 300.0
+margin_bottom = 728.0
+rect_min_size = Vector2( 300, 0 )
+size_flags_horizontal = 0
+
+[node name="Damping" type="Label" parent="Damping"]
+margin_right = 300.0
+margin_bottom = 65.0
+text = "
+
+Damping
+"
+
+[node name="CompressionText" type="Label" parent="Damping"]
+margin_top = 69.0
+margin_right = 300.0
+margin_bottom = 83.0
+text = "Compression = (0.83)"
+
+[node name="Compression" type="HBoxContainer" parent="Damping"]
+margin_top = 87.0
+margin_right = 300.0
+margin_bottom = 103.0
+
+[node name="Min" type="Label" parent="Damping/Compression"]
+margin_top = 1.0
+margin_right = 20.0
+margin_bottom = 15.0
+text = "0.0"
+
+[node name="DampingCompression" type="HSlider" parent="Damping/Compression" groups=[
+"CanEdit",
+]]
+margin_left = 24.0
+margin_right = 276.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+max_value = 3.0
+step = 0.01
+value = 0.83
+scrollable = false
+ticks_on_borders = true
+
+[node name="Max" type="Label" parent="Damping/Compression"]
+margin_left = 280.0
+margin_top = 1.0
+margin_right = 300.0
+margin_bottom = 15.0
+text = "3.0"
+
+[node name="RelaxationText" type="Label" parent="Damping"]
+margin_top = 107.0
+margin_right = 300.0
+margin_bottom = 121.0
+text = "Relaxation = (0.88)"
+
+[node name="Relaxation" type="HBoxContainer" parent="Damping"]
+margin_top = 125.0
+margin_right = 300.0
+margin_bottom = 141.0
+
+[node name="Min" type="Label" parent="Damping/Relaxation"]
+margin_top = 1.0
+margin_right = 20.0
+margin_bottom = 15.0
+text = "0.0"
+
+[node name="DampingRelaxation" type="HSlider" parent="Damping/Relaxation" groups=[
+"CanEdit",
+]]
+margin_left = 24.0
+margin_right = 276.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+max_value = 3.0
+step = 0.01
+value = 0.88
+scrollable = false
+
+[node name="Max" type="Label" parent="Damping/Relaxation"]
+margin_left = 280.0
+margin_top = 1.0
+margin_right = 300.0
+margin_bottom = 15.0
+text = "3.0"
+[connection signal="item_selected" from="Binding/BindedTo" to="." method="_on_BindedTo_item_selected"]
+[connection signal="pressed" from="General/UseAsTraction" to="." method="_on_UseAsTraction_pressed"]
+[connection signal="pressed" from="General/UseAsSteering" to="." method="_on_UseAsSteering_pressed"]
+[connection signal="value_changed" from="Wheel/RollInfluence/WheelRollInfluence" to="." method="_on_WheelRollInfluence_value_changed"]
+[connection signal="value_changed" from="Wheel/WheelRadius/WheelRadius" to="." method="_on_WheelRadius_value_changed"]
+[connection signal="value_changed" from="Wheel/RestLength/WheelRestLength" to="." method="_on_WheelRestLength_value_changed"]
+[connection signal="value_changed" from="Wheel/FrictionSlip/WheelFrictionSlip" to="." method="_on_WheelFrictionSlip_value_changed"]
+[connection signal="value_changed" from="Suspension/Travel/SuspensionTravel" to="." method="_on_SuspensionTravel_value_changed"]
+[connection signal="value_changed" from="Suspension/Stiffness/SuspensionStiffness" to="." method="_on_SuspensionStiffness_value_changed"]
+[connection signal="value_changed" from="Suspension/Stiffness/SuspensionStiffnessBox" to="." method="_on_SuspensionStiffness_value_changed"]
+[connection signal="value_changed" from="Suspension/MaxForce/SuspensionMaxForce" to="." method="_on_SuspensionMaxForce_value_changed"]
+[connection signal="value_changed" from="Suspension/MaxForce/SuspensionMaxForceBox" to="." method="_on_SuspensionMaxForce_value_changed"]
+[connection signal="value_changed" from="Damping/Compression/DampingCompression" to="." method="_on_DampingCompression_value_changed"]
+[connection signal="value_changed" from="Damping/Relaxation/DampingRelaxation" to="." method="_on_DampingRelaxation_value_changed"]
