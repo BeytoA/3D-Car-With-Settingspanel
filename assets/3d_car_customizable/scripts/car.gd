@@ -6,6 +6,8 @@ var mouseDelta = Vector2()
 # Camera variables
 
 export(bool) var use_camera = true
+export(float) var camera_height = 0.6
+export(float) var camera_distance = 0.4
 var lookSensitivity = 0.1
 var minLookAngle = -130.0
 var maxLookAngle = 25.0
@@ -39,7 +41,7 @@ func _ready():
 		aCameraNode.rotation_degrees.y = 180
 		# You can change the camera position here
 		# It is currently placed on the hood
-		cameraOrbit.translate(Vector3(0, 0.6, 0.4))
+		cameraOrbit.translate(Vector3(0, camera_height, camera_distance))
 		cameraOrbit.add_child(aCameraNode)
 		add_child(cameraOrbit)
 		
